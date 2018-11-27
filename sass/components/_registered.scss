@@ -1,0 +1,43 @@
+.registered{
+    font-family: 'Open Sans', sans-serif;
+    margin-top:2em;
+    display:flex;
+    flex-direction: column; 
+    align-items: center;
+    border: .5px solid black;
+    padding:1em 2em;
+    width:25vw;
+    height:80vh;
+    position:sticky;
+    top:2em;
+    overflow:scroll;
+    h1{
+        font-weight: 800;
+        font-size: 1.2em;
+        margin-bottom:1em;
+        display:flex;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+    ul{
+        line-height:1.5em;
+        li{
+            margin:2em 0;
+            p {
+                font-weight:100;
+                font-size:.9em;
+            }
+            .title {
+                color:#1fb7af;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .registered{
+        width:60vw;
+        position:static;
+        height:auto;
+    }
+}

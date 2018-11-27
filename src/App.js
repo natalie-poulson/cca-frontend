@@ -1,25 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import SectionContainer from './components/SectionContainer';
+import Registered from './components/Registered';
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      registeredList:[]
+    }
+  }
+
+  register = (section) => {
+    let incoming = section
+    let alreadyRegistered = this.state.registeredList
+
+    if( alreadyRegistered.includes(incoming) === false) {
+      incoming.isRegistered = true
+      incoming.registered += 1
+      let updatedList = alreadyRegistered.push(incoming)
+      this.setState({updatedList})
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          <img src="./images/nav.png" alt="cca banner"/>
+          <div className="App-body">
+            <SectionContainer register={this.register}/>
+            <Registered registeredList={this.state.registeredList}  />
+          </div>
       </div>
     );
   }
