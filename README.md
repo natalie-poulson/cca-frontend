@@ -11,7 +11,7 @@ This is the React frontend for the app. The backend for this app was built with 
 
 
 ## Getting Started:
-Visit the <a href='https://github.com/natalie-poulson/cca'>backend repo</a>to learn how to get started.
+Visit the <a href='https://github.com/natalie-poulson/cca'>backend repo</a> to learn how to get started.
  
  
 ## Features:
