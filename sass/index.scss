@@ -1,5 +1,13 @@
-@import './components/_reset';
+@import './partials/_reset';
+@import './partials/_variables';
+@import './partials/_mediaQueries';
 
-@import './components/_app';
-@import './components/_section';
-@import './components/_registered';
+@import './partials/components/_app';
+@import './partials/components/_header';
+@import './partials/components/_registrationPage';
+@import './partials/components/_sections';
+@import './partials/components/_section';
+@import './partials/components/_registered';
+@import './partials/components/_footer';
+
+

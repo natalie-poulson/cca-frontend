@@ -1,0 +1,33 @@
+.registeredComponent{
+    display:flex;
+    flex-direction: column; 
+    align-items: center;
+    margin:2em 0;
+    width:30vw;
+    height:85vh;
+    border: .5px solid black;
+    padding:1em 2em;
+    font-family: $main-font;
+    position:sticky;
+    top:2em;
+    overflow:scroll;
+    h1{
+        font-size: 1.2em;
+        margin-bottom:1em;
+    }
+    .registeredSection{
+        margin:.5em;
+        font-family: $main-font;
+        line-height:$line-height;
+        h3 {
+            color:$title-color;
+            font-size:.9em;
+        }
+        p {
+            font-size:.9em;
+        }
+        .hidden, .capacity-line {
+            display:none
+        }
+    }
+}

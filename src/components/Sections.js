@@ -13,7 +13,9 @@ class Sections extends Component {
         })
 
         return(
-            <ul>{sections}</ul>
+            <div className="sectionsComponent">
+            {sections}
+            </div>
         )
 
     }

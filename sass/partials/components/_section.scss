@@ -1,0 +1,35 @@
+.sectionComponent {
+    margin-bottom:2em;
+    font-family: $main-font;
+    line-height:$line-height;
+    h3 {
+        color:$title-color;
+        font-size:1.2em;
+    }
+    p {
+        font-size:.9em;
+    }
+    .hidden {
+        margin:1em 0 1.5em 0;
+    }
+    .capacity-line {
+        display:flex;
+        justify-content: space-between;
+        .closed {
+            color:grey;
+            text-transform:$btn-case;
+            border: .5px solid grey;
+            padding: $btn-padding;
+        }
+        .register-btn{
+            text-transform:$btn-case;
+            background-color:white;
+            border: .5px solid black;
+            padding: $btn-padding;
+            font-size:1em;
+        }
+        .already-registered{
+            text-transform:$btn-case;
+        }
+    }
+}

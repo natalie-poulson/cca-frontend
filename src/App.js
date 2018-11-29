@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './index.css';
-import SectionContainer from './components/SectionContainer';
-import Registered from './components/Registered';
+import Main from './components/Main';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 
 class App extends Component {
   constructor() {
@@ -11,6 +13,7 @@ class App extends Component {
     }
   }
 
+  
   register = (section) => {
     let incoming = section
     let alreadyRegistered = this.state.registeredList
@@ -25,12 +28,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-          <img src="./images/nav.png" alt="cca banner"/>
-          <div className="App-body">
-            <SectionContainer register={this.register}/>
-            <Registered registeredList={this.state.registeredList}  />
-          </div>
+      <div className="AppComponent">
+          <Header />
+          <Main register={this.register} registeredList={this.state.registeredList}/>
+          <Footer />
       </div>
     );
   }

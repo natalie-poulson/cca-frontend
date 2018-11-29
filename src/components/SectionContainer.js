@@ -21,9 +21,7 @@ class SectionContainer extends Component {
     }
     render() {
         return (
-            <div className="sectionsComponent">
-                <Sections sections={this.state.sections} register={this.props.register} />
-            </div>
+            <Sections sections={this.state.sections} register={this.props.register} />
         );
     }
 }

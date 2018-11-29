@@ -52,117 +52,190 @@ table {
   border-spacing: 0;
 }
 
-.App {
+@media screen and (max-width: 930px) {
+  .headerComponent {
+    justify-content: center !important;
+  }
+  .headerComponent .logo img {
+    width: 12em;
+  }
+  .headerComponent .fa-search, .headerComponent .tagline {
+    display: none;
+  }
+
+  .registrationPage {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .registrationPage .registeredComponent {
+    width: 60vw;
+    position: static;
+    height: auto;
+  }
+  .registrationPage .sectionsComponent {
+    width: 75vw;
+  }
+  .registrationPage .sectionsComponent .sectionComponent h3 {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .headerComponent {
+    background-color: red;
+  }
+
+  .registrationPage .registeredComponent .registeredSection {
+    font-size: 0.9em;
+  }
+  .registrationPage .sectionsComponent .sectionComponent h3 {
+    font-size: 1em;
+  }
+
+  .footerComponent {
+    flex-direction: column;
+  }
+  .footerComponent .footerCampus {
+    display: flex;
+  }
+  .footerComponent .footerCampus .campusInfo {
+    font-size: 0.8em;
+  }
+}
+.AppComponent {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.App img {
-  width: 80vw;
-}
-.App .App-body {
+
+.headerComponent {
+  width: 85vw;
+  background-color: black;
   display: flex;
-  width: 75vw;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerComponent .logo {
+  display: flex;
+  align-items: center;
+}
+.headerComponent .logo .tagline h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.4em;
+  font-size: 1em;
+  color: white;
+  text-transform: uppercase;
+}
+.headerComponent .fa-search {
+  color: #1fb7af;
+  margin: 0 1em;
+  font-size: 1.5em;
+}
+
+.registrationPage {
+  display: flex;
+  width: 80vw;
   justify-content: space-between;
 }
 
-@media screen and (max-width: 910px) {
-  .App .App-body {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-}
-@media screen and (max-width: 500px) {
-  .App img {
-    display: none;
-  }
-}
-.section {
-  margin: 2em 0;
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.5em;
+.sectionsComponent {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 2em;
   width: 35vw;
 }
-.section h3 {
+
+.sectionComponent {
+  margin-bottom: 2em;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.4em;
+}
+.sectionComponent h3 {
   color: #1fb7af;
-  font-weight: 300;
   font-size: 1.2em;
 }
-.section p {
-  font-weight: 100;
+.sectionComponent p {
   font-size: 0.9em;
 }
-.section .capacity-line {
+.sectionComponent .hidden {
+  margin: 1em 0 1.5em 0;
+}
+.sectionComponent .capacity-line {
   display: flex;
   justify-content: space-between;
 }
-.section .capacity-line .closed {
+.sectionComponent .capacity-line .closed {
   color: grey;
   text-transform: uppercase;
   border: 0.5px solid grey;
   padding: 0.25em 0.5em;
 }
-.section .capacity-line .register-btn {
+.sectionComponent .capacity-line .register-btn {
   text-transform: uppercase;
   background-color: white;
   border: 0.5px solid black;
   padding: 0.25em 0.5em;
   font-size: 1em;
 }
-.section .capacity-line .already-registered {
+.sectionComponent .capacity-line .already-registered {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 910px) {
-  .section {
-    width: 75vw;
-  }
-}
-.registered {
-  font-family: "Open Sans", sans-serif;
-  margin-top: 2em;
+.registeredComponent {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 2em 0;
+  width: 30vw;
+  height: 85vh;
   border: 0.5px solid black;
   padding: 1em 2em;
-  width: 25vw;
-  height: 80vh;
+  font-family: "Open Sans", sans-serif;
   position: sticky;
   top: 2em;
   overflow: scroll;
 }
-.registered h1 {
-  font-weight: 800;
+.registeredComponent h1 {
   font-size: 1.2em;
   margin-bottom: 1em;
-  display: flex;
-  justify-content: center;
-  text-transform: uppercase;
 }
-.registered ul {
-  line-height: 1.5em;
+.registeredComponent .registeredSection {
+  margin: 0.5em;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.4em;
 }
-.registered ul li {
-  margin: 2em 0;
-}
-.registered ul li p {
-  font-weight: 100;
+.registeredComponent .registeredSection h3 {
+  color: #1fb7af;
   font-size: 0.9em;
 }
-.registered ul li .title {
-  color: #1fb7af;
+.registeredComponent .registeredSection p {
+  font-size: 0.9em;
+}
+.registeredComponent .registeredSection .hidden, .registeredComponent .registeredSection .capacity-line {
+  display: none;
 }
 
-@media screen and (max-width: 910px) {
-  .registered {
-    width: 60vw;
-    position: static;
-    height: auto;
-  }
+.footerComponent {
+  width: 85vw;
+  margin-top: 4em;
+  display: flex;
+  justify-content: space-between;
+}
+.footerComponent .campusInfo {
+  line-height: 1.4em;
+  margin: 1em;
+}
+.footerComponent .campusInfo h4, .footerComponent .campusInfo p {
+  font-family: "Open Sans", sans-serif;
+}
+.footerComponent .campusInfo h4 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.footerComponent .campusInfo p {
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,21 +1,20 @@
 import React, { Component } from 'react'
+import Section from './Section'
 
 class Registered extends Component {
     render() {
         let registeredList = this.props.registeredList.map( (section)=> {
             return(
-                <li key={section.id}>
-                <p className='title'>{section.section_id}: {section.section_title}</p>
-                <p>{section.department} | {section.instructor}</p>
-                <p>{section.room}</p>
-                </li>
+                <Section
+                key={section.id}
+                section={section}/>
             )
         })
 
         return (
-            <div className='registered'>
-                <h1>Your Classes</h1>
-                <ul>{registeredList}</ul>
+            <div className='registeredComponent'>
+                <h1>Registered Classes:</h1>
+                <ul className='registeredSection'>{registeredList}</ul>
             </div>
         );
     }

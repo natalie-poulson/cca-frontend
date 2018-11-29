@@ -1,0 +1,27 @@
+.headerComponent {
+    width:85vw;
+    background-color:black;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        display:flex;
+        align-items: center;
+        .tagline {
+            h3 {
+                font-family:$main-font;
+                font-weight: 300;
+                line-height:$line-height;
+                font-size:1em;
+                color:white;
+                text-transform:uppercase;
+            }
+        }
+    }
+    .fa-search {
+        color:$title-color;
+        margin:0 1em;
+        font-size:1.5em;
+    }
+    
+}

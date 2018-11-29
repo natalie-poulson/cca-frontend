@@ -1,0 +1,60 @@
+@media screen and (max-width: 930px) {
+    .headerComponent{
+        justify-content: center !important;
+        .logo{
+            img {
+                width:12em;
+            }
+        }
+        .fa-search, .tagline {
+            display:none;
+        }
+    }
+    .registrationPage{
+        flex-direction: column-reverse;
+        align-items: center;
+        .registeredComponent{
+            width:60vw;
+            position:static;
+            height:auto;
+        }
+        .sectionsComponent{
+            width:75vw;
+            .sectionComponent {
+                h3 {
+                    font-size:1.1em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .headerComponent{
+        background-color:red;
+    }
+    .registrationPage{
+        .registeredComponent{
+            .registeredSection{
+                font-size:.9em;
+            }
+        }
+        .sectionsComponent{
+            .sectionComponent {
+                h3 {
+                    font-size:1em;
+                }
+            }
+        }
+    }
+    .footerComponent {
+        flex-direction: column;
+        .footerCampus {
+            display:flex;
+            .campusInfo{
+                font-size:.8em;
+            }
+        }
+    }
+}
+
