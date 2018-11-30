@@ -49,10 +49,18 @@
     }
     .footerComponent {
         flex-direction: column;
+        align-items: center;
+        img {
+            width:10em;
+        }
         .footerCampus {
             display:flex;
             .campusInfo{
-                font-size:.8em;
+                margin-top:.5em;
+                align-items: center;
+                h4, p {
+                    font-size:.8em;
+                }
             }
         }
     }

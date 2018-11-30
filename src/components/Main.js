@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SectionContainer from './SectionContainer';
+import SectionContainer from '../containers/SectionContainer';
 import Registered from './Registered';
 
 class Main extends Component {

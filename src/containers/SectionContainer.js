@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SectionModel from '../models/Section'
-import Sections from './Sections';
+import Sections from '../components/Sections';
 
 class SectionContainer extends Component {
     constructor(){
