@@ -13,18 +13,17 @@ class App extends Component {
     }
   }
 
-  
   register = (section) => {
-    let incoming = section
     let alreadyRegistered = this.state.registeredList
 
-    if( alreadyRegistered.includes(incoming) === false) {
-      incoming.isRegistered = true
-      incoming.registered += 1
-      let updatedList = alreadyRegistered.push(incoming)
-      this.setState({updatedList})
+    if (alreadyRegistered.includes(section)===false){
+      section.isRegistered = true
+      section.registered += 1
+      alreadyRegistered.push(section)
+      this.setState({registeredList: alreadyRegistered})
     }
   }
+
 
   render() {
     return (
