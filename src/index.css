@@ -189,6 +189,11 @@ table {
 }
 .sectionComponent .capacity-line .already-registered {
   text-transform: uppercase;
+  background-color: white;
+  color: #FF5700;
+  border: 0.5px solid #FF5700;
+  padding: 0.25em 0.5em;
+  font-size: 0.7em;
 }
 
 .registeredComponent {
@@ -221,7 +226,7 @@ table {
 .registeredComponent .registeredSection p {
   font-size: 0.9em;
 }
-.registeredComponent .registeredSection .hidden, .registeredComponent .registeredSection .capacity-line {
+.registeredComponent .registeredSection .hidden {
   display: none;
 }
 

@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import Section from './Section'
 
 class Registered extends Component {
+
     render() {
         let registeredList = this.props.registeredList.map( (section)=> {
             return(
                 <Section
                 key={section.id}
-                section={section}/>
+                section={section}
+                unregister={this.props.unregister}/>
             )
         })
 

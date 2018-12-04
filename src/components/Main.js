@@ -6,8 +6,8 @@ class Main extends Component {
     render(){
         return (
             <div className="registrationPage">
-                <SectionContainer register={this.props.register}/>
-                <Registered registeredList={this.props.registeredList} />
+                <SectionContainer unregister={this.props.unregister} register={this.props.register}/>
+                <Registered unregister={this.props.unregister} registeredList={this.props.registeredList} />
             </div>
         )
     }

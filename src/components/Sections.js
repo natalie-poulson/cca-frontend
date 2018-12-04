@@ -8,7 +8,8 @@ class Sections extends Component {
                 <Section
                 key={section.id}
                 section={section}
-                register={this.props.register}/>
+                register={this.props.register}
+                unregister={this.props.unregister}/>
             )
         })
 

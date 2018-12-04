@@ -5,6 +5,10 @@ class Section extends Component {
         this.props.register(this.props.section)
     }
 
+    unregisterThis = () => {
+        this.props.unregister(this.props.section)
+    }
+
     render(){
         let available = this.props.section.capacity - this.props.section.registered
 
@@ -14,15 +18,17 @@ class Section extends Component {
                 <p>{this.props.section.department} | Instructor: {this.props.section.instructor}</p>
                 <p>{this.props.section.room}</p>
                 <div className ="capacity-line">
-                    <p>Available: {available} / {this.props.section.capacity}</p> 
-            
-                    {this.props.section.capacity === this.props.section.registered ? 
-                    <p className="closed">closed</p> : 
+                    <p>Available: {available} / {this.props.section.capacity}</p>  
+
+                    {this.props.section.capacity === this.props.section.registered && this.props.section.isRegistered ? 
+                    <button className="already-registered" onClick={this.unregisterThis}>Unregister</button> :
                     this.props.section.isRegistered ? 
-                    <p className="already-registered">registered</p> : 
+                    <button className="already-registered" onClick={this.unregisterThis}>Unregister</button> :
+                    this.props.section.capacity === this.props.section.registered ? 
+                    <p className="closed">closed</p> :
                     <button className="register-btn" onClick={this.registerThis}>Register</button>
                     }
-                    
+
                 </div>
                 <p className="hidden">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>

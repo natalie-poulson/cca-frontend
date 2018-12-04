@@ -30,6 +30,11 @@
         }
         .already-registered{
             text-transform:$btn-case;
+            background-color:white;
+            color:#FF5700;
+            border: .5px solid #FF5700;
+            padding: $btn-padding;
+            font-size:.7em;
         }
     }
 }

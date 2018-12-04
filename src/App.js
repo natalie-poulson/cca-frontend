@@ -13,6 +13,18 @@ class App extends Component {
     }
   }
 
+  unregister = (section) => {
+    let alreadyRegistered = this.state.registeredList
+    let index = alreadyRegistered.indexOf(section);
+
+    if (index > -1 ){
+      alreadyRegistered.splice(index,1)
+      section.isRegistered = false
+      section.registered -= 1
+      this.setState({registeredList: alreadyRegistered})
+    }
+  }
+
   register = (section) => {
     let alreadyRegistered = this.state.registeredList
 
@@ -24,12 +36,11 @@ class App extends Component {
     }
   }
 
-
   render() {
     return (
       <div className="AppComponent">
           <Header />
-          <Main register={this.register} registeredList={this.state.registeredList}/>
+          <Main unregister={this.unregister} register={this.register} registeredList={this.state.registeredList}/>
           <Footer />
       </div>
     );
